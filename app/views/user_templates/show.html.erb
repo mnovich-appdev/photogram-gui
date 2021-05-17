@@ -34,6 +34,7 @@
       <input id="browser_username" type="text" name="input_username" placeholder="Enter a username..." value=<%=@user.username%>>
 
       <button> Update user </button>
+    </form>
   </dd> 
 </dl>
 
@@ -61,7 +62,7 @@
     </th>
   </tr>
 
-  <%@user.own_photos.each do |display| %>
+  <%@user.own_photos.each do |display|%>
   <tr>
 
     <td>
@@ -87,3 +88,4 @@
     </td>
   </tr>
   <%end%>
+  </table>

@@ -17,7 +17,7 @@
 
 <form action="/insert_user_record">
   <label for="browser_username">Username</label>
-  <input id="browser_username" type="text" name="input username" placeholder="Enter a username...">
+  <input id="browser_username" type="text" name="input_username" placeholder="Enter a username...">
 
   <button> Add user </button>
 </form>
@@ -49,7 +49,7 @@
     </td>
 
     <td>
-      <a href="/users/<%=display.id%>">
+      <a href="/users/<%=display.username%>">
         Show details
       </a>
     </td>
