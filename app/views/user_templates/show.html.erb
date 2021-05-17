@@ -37,4 +37,53 @@
   </dd> 
 </dl>
 
-<h1> Own photos </h1>
+<h1> Own photos (<%=@user.own_photos.count%>) </h1>
+
+<table border="1">
+  <tr>
+    <th>
+      Image
+    </th>
+
+    <th>
+      Owner
+    </th>
+
+    <th>
+      Caption
+    </th>
+
+    <th>
+      Posted
+    </th>
+
+    <th>
+    </th>
+  </tr>
+
+  <%@user.own_photos.each do |display| %>
+  <tr>
+
+    <td>
+      <img src="<%=display.image%>">
+    </td>
+    
+    <td>
+      <%=display.poster.username%>
+    </td>
+  
+    <td>
+      <%=display.caption%>
+    </td>
+
+    <td>
+      <%=display.created_at%>
+    </td>
+
+    <td>
+      <a href="/photos/<%=display.id%>">
+        Show details
+      </a>
+    </td>
+  </tr>
+  <%end%>
